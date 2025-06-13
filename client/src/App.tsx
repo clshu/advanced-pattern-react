@@ -9,7 +9,7 @@ import { Toaster } from "./features/shared/components/ui/Toaster";
 import { ThemeProvider } from "./features/shared/components/ThemeProvider";
 
 import { env } from "./lib/utils/env";
-import { trpc } from "./trpc";
+import { trpc } from "./router";
 
 export function App() {
   const [queryClient] = useState(() => new QueryClient());
