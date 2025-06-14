@@ -1,3 +1,4 @@
+import { ErrorComponent } from "./features/shared/components/ErrorComponent";
 import Spinner from "./features/shared/components/ui/Spinner";
 import type { AppRouter } from "@advanced-react/server";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -41,6 +42,7 @@ function createRouter() {
         <Spinner />
       </div>
     ),
+    defaultErrorComponent: ErrorComponent,
     Wrap: function WrapComponent({ children }) {
       return (
         <trpc.Provider client={trpcClient} queryClient={queryClient}>
